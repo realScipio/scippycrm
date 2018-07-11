@@ -1,0 +1,81 @@
+/*
+--- colors used ---
+blue:       rgb(32, 121, 226)
+blueDark:   rgb(18, 61, 104)
+red:        rgb(221, 58, 20)
+white:      rgb(255, 255, 255)
+*/
+
+* { margin: 0; padding: 0; outline: 0; }
+img { display: block; max-width: 100%; height: auto; } 
+
+body { font-family: 'Roboto'; font-size: 13px; }
+div.wrapper { width: 960px; margin: 0 auto; }
+
+h1 { }
+h2 { }
+h3 { font-size: 24px; line-height: 2.0em; color: rgb(32, 121, 226); }
+h4 { }
+h5 { }
+h6 { }
+p  { }
+a  { }
+a:hover { }
+
+section#top { padding: 30px 0; background-color: rgb(255, 255, 255); }
+section#top div.top_holder { overflow: auto; }
+section#top div.logo { float: left; width: 240px; }
+section#top div.topnav { float: right; }
+section#top div.topnav ul { list-style-type: none; } 
+section#top div.topnav li { display: inline-block; margin: 10px; }
+section#top div.topnav a { text-decoration: none; color: rgb(32, 121, 226); }
+section#top div.topnav a:hover { text-decoration: underline; }
+
+section#appnav { }
+section#appnav div.appnav_holder { background-color: rgb(18, 61, 104); }
+section#appnav ul { list-style-type: none; }
+section#appnav li { display: inline-block; margin: 10px; }
+section#appnav a { text-decoration: none; color: rgb(255, 255, 255); }
+section#appnav a:hover { text-decoration: underline; }
+
+section#main { padding: 40px 0; }
+section#main div.main_holder { overflow: auto; }
+section#main div.row { overflow: auto; padding-bottom: 10px; }
+section#main h3 { display: inline-block; float: left; }
+section#main a.readmore { display: inline-block; float: right; box-sizing: border-box; width: 48px; font-size: 24px; line-height: 2.0em; background-color: rgb(32, 121, 226); color: rgb(255, 255, 255); text-align: center; text-decoration: none; transition: 0.2s background-color; }
+section#main a.readmore:hover { background-color: rgb(18, 61, 104); } 
+
+section#main div.form_block { }
+section#main div.form_block form { }
+section#main div.form_block div.form_row { overflow: auto; }
+section#main div.form_block div.form_col { float: left; box-sizing: border-box; width: calc(100% / 3); padding-right: 10px; }
+section#main div.form_block div.form_group { overflow: auto; padding: 6px 0; }
+section#main div.form_block div.form_label { float: left; margin-right: 20px; width: 100px; line-height: 1.5em; padding: 4px 8px 4px 0; color: rgb(18, 61, 104); }
+section#main div.form_block div.form_field { float: left; line-height: 1.5em; }
+section#main div.form_block input { font-family: 'Roboto'; font-size: 13px; }
+section#main div.form_block input[type=text] { padding: 4px 8px; font-weight: 400; border: 1px solid rgba(32, 121, 226, 0.3); }
+section#main div.form_block input[type=password] { padding: 4px 8px; font-weight: 400; border: 1px solid rgba(32, 121, 226, 0.3); }
+section#main div.form_block input[type=submit] { background-color:rgb(32, 121, 226); color: rgb(255, 255, 255); padding: 6px 12px; border: none; font-weight: 700; cursor: pointer; transition: 0.2s background-color; }
+section#main div.form_block input[type=submit]:hover { background-color: rgb(18, 61, 104); }
+
+section#main div#login { width: 40%; margin: 0 auto; border: 1px solid rgba(32, 121, 226, 0.3); border-radius: 25px; padding: 60px 60px; }
+section#main div#login div.form_col { width: 100%; }
+section#main div#login div.form_label { text-align: right; }
+
+section#main div.overview { }
+section#main div.overview div.overview_header { overflow: auto; background-color: rgb(32, 121, 226); }
+section#main div.overview div.overview_header_col { float: left; width: 25%; box-sizing: border-box; padding: 4px 4px; font-weight: 500; color: rgb(255, 255, 255); }
+section#main div.overview div.overview_content { }
+section#main div.overview div.overview_content_row { overflow: auto; }
+section#main div.overview div.overview_content_row:hover { background-color:  rgb(18, 61, 104) !important; }
+section#main div.overview div.overview_content_row.even { background-color: rgba(32, 121, 226, 0.06); }
+section#main div.overview div.overview_content_row a { display: block; text-decoration: none; color: rgb(18, 61, 104); }
+section#main div.overview div.overview_content_row a:hover { color: rgb(255, 255, 255); }
+section#main div.overview div.overview_content_col { float: left; width: 25%; box-sizing: border-box; padding: 4px 4px; }
+
+
+section#footer { position: absolute; bottom: 0; width: 100%; padding: 15px 0; background-color: rgb(32, 121, 226); color: rgb(255, 255, 255);}
+section#footer div.footer_holder { overflow: auto; }
+section#footer div.footer_holder a { color: rgb(255, 255, 255); text-decoration: none;  }
+section#footer div.footer_holder a:hover { text-decoration: underline; }
+section#footer div.footer_holder a span { padding-right: 6px; }

@@ -1,0 +1,17 @@
+<section id="top">
+    <div class="wrapper">
+        <div class="top_holder">
+            <div class="logo">
+                <img src="../static/scippycrm-logo.svg" />
+            </div>
+            <div class="topnav">
+                <ul>
+                    {% if session.logged_in %}
+                        <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+                        <li><a href="{{ url_for('logout') }}">Log out</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>    
+</section>

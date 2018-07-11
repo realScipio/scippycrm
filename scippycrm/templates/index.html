@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <div id="login" class="form_block">
+        <div class="row">
+            <h3>Login</h3>
+        </div>
+        <form method ="post" action="" novalidate>
+            {{ form.hidden_tag() }}
+            <div class="form_row">
+                <div class="form_col">
+                    <div class="form_group">
+                        <div class="form_label">
+                            {{ form.username.label }}                            
+                        </div>
+                        <div class="form_field">
+                            {{ form.username() }}                            
+                        </div>
+                    </div>
+                    <div class="form_group">
+                        <div class="form_label">
+                            {{ form.password.label }}                            
+                        </div>
+                        <div class="form_field">
+                            {{ form.password() }}                            
+                        </div>
+                    </div>
+                    <div class="form_group">
+                        <div class="form_label">
+                            &nbsp;
+                        </div>
+                        <div class="form_field">
+                            {{ form.submit() }}                            
+                        </div>
+                    </div>
+                </div>
+            </div>                            
+        </form>
+    </div>
+{% endblock %}
