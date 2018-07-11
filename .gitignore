@@ -3,6 +3,7 @@
 instance/*
 
 # Other
+__pycache__/
 *.py[co]
 *.DS_*
 # Packages
