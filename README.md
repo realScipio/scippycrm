@@ -7,7 +7,7 @@ scippyCRM is a B2B Customer Relationship Management application built with Flask
 - MongoDB
 
 # Installation
-To run this locally you must have MongoDB and Python3.6 (I've used the Anaconda distribution myself), and git, obviously, installed, and if you have, you can clone this repository via:
+To run this locally you must have MongoDB and Python3.6 (I've used the Anaconda distribution myself), and git, obviously, installed, and if you have, you can clone the repository via:
 
 ```
 $ git clone https://github.com/realScipio/scippycrm.git
