@@ -13,7 +13,28 @@ To run this locally you must have MongoDB and Python3.6 (I've used the Anaconda 
 $ git clone https://github.com/realScipio/scippycrm.git
 ```
 
+If you prefer to use a `venv`, proceed with
 
+```
+$ cd scippycrm
+$ python3 -m venv venv
+$ source venv/bin/activate
+```
+
+Then (inside your `venv`) install the Python packages using:
+
+```
+pip install -r requirements.txt
+```
+
+Running the application (at this stage preferably in dev mode), like so:
+```
+export FLASK_APP=scippycrm
+export FLASK_ENV=development
+flask run
+```
+
+Then open up your browser, head over to **http://localhost:5000/** _et voila!_ (Login with `admin:admin`).
 
 # Features
 ### v0.0.1:
