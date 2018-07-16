@@ -7,14 +7,17 @@ from wtforms.validators import DataRequired
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
-def create_app(test_config=None):    
+def create_app(config_file=None):    
     app = Flask(__name__, instance_relative_config=True)
+    app.config.from_pyfile(config_file)
+    '''
     app.config.from_mapping(
         SECRET_KEY = 'Very_very_secret!',
         USERNAME = 'admin',
         PASSWORD = 'admin',
         MONGO_URI = 'mongodb://localhost:27017/scippycrm'
     )
+    '''
     mongo = PyMongo(app)
 
     def login_required(f):
