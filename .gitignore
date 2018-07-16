@@ -1,6 +1,6 @@
 # VSC
 .vscode/*
-instance/*
+#instance/*
 
 # Other
 __pycache__/
