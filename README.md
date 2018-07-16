@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 Running the application (at this stage preferably in dev mode), like so:
 ```
-export FLASK_APP=scippycrm
+export FLASK_APP=main.py
 export FLASK_ENV=development
 flask run
 ```
