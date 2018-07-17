@@ -5,7 +5,7 @@ from passlib.hash import sha512_crypt
 
 from scippycrm import login_required
 from . import users_blueprint
-from .forms import LoginForm, UserForm
+from .forms import LoginForm, UserForm, UserForm_existing
 
 # login page, for this app it's the index
 @users_blueprint.route('/', methods=['GET', 'POST'])
@@ -82,14 +82,16 @@ def user(user_id='new'):
     if user_id == 'new':
         user = {}        
         title = 'New user'
+        form = UserForm(obj=user)
     else:            
         user = coll.find_one_or_404({'_id': user_id})
         title = 'User: ' + user['username']
+        form = UserForm_existing(obj=user)
     
-    form = UserForm(obj=user)        
+    #form = UserForm(obj=user)        
 
     # validate form data when submitted via POST request
-    if form.validate_on_submit():
+    if form.validate_on_submit():        
         obj_for_update = {}
         for fieldname, value in form.data.items():
             # add hashed password, instead of plain text password,to `obj_for_update``

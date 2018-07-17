@@ -12,7 +12,9 @@
             <div class="form_row">
                 <div class="form_col">
                     {{ render_field(form.username, value=user.username) }}
-                    {{ render_field(form.password, value=user.password) }}
+                    {% if user == {}  %}
+                        {{ render_field(form.password, value=user.password) }}
+                    {% endif %}
                 </div>
                 <div class="form_col">
                     {{ render_field(form.firstname, value=user.firstname) }}
