@@ -10,6 +10,7 @@ class LoginForm(FlaskForm):
 class UserForm(FlaskForm):
     user_id = HiddenField('_id')
     username = StringField('Username', validators=[DataRequired()])
+    password = PasswordField('Password', validators=[DataRequired()])
     firstname = StringField('First name')
     sirname = StringField('Sirname')    
     email = StringField('Email')    
