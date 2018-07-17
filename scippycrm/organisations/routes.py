@@ -51,7 +51,7 @@ def organisation(org_id='new'):
         for key in org:
             if org[key] != None and org[key] != "":
                 clean_obj[key] = org[key]            
-        result = coll.replace_one({'_id': ObjectId(org_id)}, clean_obj)            
+        coll.replace_one({'_id': ObjectId(org_id)}, clean_obj)            
 
         return redirect(url_for('organisations.organisation', org_id=org_id))         
 
