@@ -3,7 +3,7 @@
 {% block main %}
     <div id="organisations" class="overview">
         <div class="row">
-            <h3>Organisations</h3>
+            <h3>Organisations ({{num_orgs}})</h3>
             <a href="{{url_for('organisations.organisation', org_id='new')}}" class="readmore">+</a>
         </div>
         <div class="overview_header">

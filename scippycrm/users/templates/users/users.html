@@ -3,7 +3,7 @@
 {% block main %}
     <div id="users" class="overview">
         <div class="row">
-            <h3>Users</h3>
+            <h3>Users ({{num_users}})</h3>
             <a href="{{url_for('users.user', user_id='new')}}" class="readmore">+</a>
         </div>
         <div class="overview_header">
