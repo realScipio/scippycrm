@@ -1,28 +1,17 @@
-import os
-from functools import wraps
-from flask import render_template, flash, redirect, url_for, session, g, request
+from flask import render_template, flash, redirect, url_for, session, g, request, Markup
 from flask import current_app as app
-# from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
+from scippycrm import login_required
 from . import organisations_blueprint
 from .forms import OrganisationForm
-
-
-def login_required(f):
-    @wraps(f)
-    def decorated_function(*args, **kwargs):        
-        if 'logged_in' in session:
-            return f(*args, **kwargs)        
-        return redirect(url_for('index'))
-    return decorated_function
 
 @organisations_blueprint.route('/organisations')    
 @login_required
 def organisations():
     coll = app.mongo.db.organisations
     orgs = coll.find()
-    return render_template('organisations.html', title='Organisations', orgs=orgs)
+    return render_template('organisations/organisations.html', title='Organisations', orgs=orgs)
 
 @organisations_blueprint.route('/organisation/new', methods=['GET', 'POST'])
 @organisations_blueprint.route('/organisation/<ObjectId:org_id>', methods=['GET', 'POST'])
@@ -65,4 +54,4 @@ def organisation(org_id='new'):
 
         return redirect(url_for('organisations.organisation', org_id=org_id))         
 
-    return render_template('organisation.html', title=title, org=org, form=form)
+    return render_template('organisations/organisation.html', title=title, org=org, form=form)

@@ -1,0 +1,33 @@
+{% from '_render_field.html' import render_field %}
+{% extends "base.html" %}
+
+{% block main %}
+    <div id="organisation" class="form_block">
+        <div class="row">
+                <h3>Organisation details</h3>
+        </div>        
+        <form method ="post" action="" novalidate>
+            {{ form.hidden_tag() }}
+            {{ form.org_id(value=org._id) }}
+            <div class="form_row">
+                <div class="form_col">
+                    {{ render_field(form.name, value=org.name) }}
+                    {{ render_field(form.address, value=org.address) }}
+                    {{ render_field(form.zipcode, value=org.zipcode) }}
+                    {{ render_field(form.city, value=org.city) }}
+                    {{ render_field(form.country, value=org.country) }}                    
+                </div>
+                <div class="form_col">
+                    {{ render_field(form.phone, value=org.phone) }}
+                    {{ render_field(form.email, value=org.email) }}
+                    {{ render_field(form.url, value=org.url) }}
+                </div>
+            </div>
+            <div class="form_row">
+                <div class="form_field">
+                    {{ form.submit() }}
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

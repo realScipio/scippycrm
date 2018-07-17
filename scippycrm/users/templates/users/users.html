@@ -1,40 +1,40 @@
 {% extends "base.html" %}
 
 {% block main %}
-    <div id="organisations" class="overview">
+    <div id="users" class="overview">
         <div class="row">
-            <h3>Organisations</h3>
-            <a href="{{url_for('organisations.organisation', org_id='new')}}" class="readmore">+</a>
+            <h3>Users</h3>
+            <a href="{{url_for('users.user', user_id='new')}}" class="readmore">+</a>
         </div>
         <div class="overview_header">
             <div class="overview_header_col">
-                Name
+                Username
             </div>
             <div class="overview_header_col">
-                City
+                First name
             </div>
             <div class="overview_header_col">
-                Phone
+                Sirname
             </div>
             <div class="overview_header_col">
-                URL
+                Email
             </div>
         </div>
         <div class="overview_content">
-            {% for org in orgs %}            
+            {% for user in users %}            
             <div class="overview_content_row {{ loop.cycle('odd', 'even') }}">
-                <a href="{{url_for('organisations.organisation', org_id=org._id)}}">
+                <a href="{{url_for('users.user', user_id=user._id)}}">
                     <div class="overview_content_col">
-                        {{org.name}}
+                        {{user.username}}
                     </div>
                     <div class="overview_content_col">
-                        {{org.city}}
+                        {{user.firstname}}
                     </div>
                     <div class="overview_content_col">
-                        {{org.phone}}
+                        {{user.sirname}}
                     </div>
                     <div class="overview_content_col">
-                        {{org.url}}
+                        {{user.email}}
                     </div>
                 </a>
             </div>            
