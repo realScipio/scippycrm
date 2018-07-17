@@ -6,6 +6,7 @@ from scippycrm import login_required
 from . import organisations_blueprint
 from .forms import OrganisationForm
 
+# show organisations overview
 @organisations_blueprint.route('/organisations')    
 @login_required
 def organisations():
@@ -14,6 +15,7 @@ def organisations():
     num_orgs = orgs.count()
     return render_template('organisations/organisations.html', title='Organisations', orgs=orgs, num_orgs=num_orgs)
 
+# show / insert / update single organisation data
 @organisations_blueprint.route('/organisation/new', methods=['GET', 'POST'])
 @organisations_blueprint.route('/organisation/<ObjectId:org_id>', methods=['GET', 'POST'])
 @login_required
@@ -28,6 +30,7 @@ def organisation(org_id='new'):
     
     form = OrganisationForm(obj=org)        
 
+    # validate form data when submitted via POST request
     if form.validate_on_submit():
         obj_for_update = {}
         for fieldname, value in form.data.items():
