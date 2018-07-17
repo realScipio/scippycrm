@@ -40,7 +40,7 @@ def organisation(org_id='new'):
 
         # update Mongo organisation record with POST-data from OrganisationForm
         else:
-            result = coll.update_one(
+            coll.update_one(
                 {"_id": ObjectId(org_id)},
                 {"$set": obj_for_update}
             )
