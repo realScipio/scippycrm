@@ -106,7 +106,7 @@ def user(user_id='new'):
 
         # update Mongo user record with POST-data from UserForm
         else:
-            result = coll.update_one(
+            coll.update_one(
                 {"_id": ObjectId(user_id)},
                 {"$set": obj_for_update}
             )
