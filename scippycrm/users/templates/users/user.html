@@ -12,10 +12,11 @@
             <div class="form_row">
                 <div class="form_col">
                     {{ render_field(form.username, value=user.username) }}
+                    {{ render_field(form.password, value=user.password) }}
+                </div>
+                <div class="form_col">
                     {{ render_field(form.firstname, value=user.firstname) }}
                     {{ render_field(form.sirname, value=user.sirname) }}
-                </div>
-                <div class="form_col">                    
                     {{ render_field(form.email, value=user.email) }}
                 </div>
             </div>

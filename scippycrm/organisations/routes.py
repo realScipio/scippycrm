@@ -11,7 +11,8 @@ from .forms import OrganisationForm
 def organisations():
     coll = app.mongo.db.organisations
     orgs = coll.find()
-    return render_template('organisations/organisations.html', title='Organisations', orgs=orgs)
+    num_orgs = orgs.count()
+    return render_template('organisations/organisations.html', title='Organisations', orgs=orgs, num_orgs=num_orgs)
 
 @organisations_blueprint.route('/organisation/new', methods=['GET', 'POST'])
 @organisations_blueprint.route('/organisation/<ObjectId:org_id>', methods=['GET', 'POST'])
