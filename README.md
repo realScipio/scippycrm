@@ -37,6 +37,13 @@ flask run
 Then open up your browser, head over to **http://localhost:5000/** _et voila!_ (Login with `admin:admin`).
 
 # Features
+### v0.0.2:
+- login via `user['username']:user['password']` if users.count() > 0
+- display an overview of current "Users"
+- add a new "User"
+- update/change "User" fields
+- Blueprint- & Application Factory enabled architecture
+
 ### v0.0.1:
 - login via `admin:admin`
 - logout
@@ -46,8 +53,8 @@ Then open up your browser, head over to **http://localhost:5000/** _et voila!_ (
 
 # Roadmap
 Some of the planned roadmap milestones include:
-- architecture-wise, I will modularize the (future) application components with Flask Blueprints;
-- add functionality for multiple System Users
+- ~~architecture-wise, I will modularize the (future) application components with Flask Blueprints;~~
+- ~~add functionality for multiple System Users~~
 - add functionality for "Employees / Contactpersons", that work for a given "Organisation"
 - add functionality for "Contact history" for a given "Organisation" & "Employee"
 - add functionality for "Task management" (what to do when for who), integrated with "Contact history"
